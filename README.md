@@ -1,25 +1,48 @@
-# Ranro Loan Management App
+# Ranro Loan Mobile App
 
-The Ranro Loan Management App is a mobile application designed to help users manage their loans efficiently. This app provides features for tracking loan details, payment schedules, and overall loan management.
+Flutter mobile application for microfinance loan management — loan lookup, QR scanning, receipts, and Bluetooth printing.
+
+## Overview
+
+Field agent app for viewing loan details, scanning customer QR codes, listing loans with due amounts, and printing receipts via Bluetooth thermal printers.
 
 ## Features
 
-- **Loan Tracking**: Easily add and manage multiple loans, including loan amount, interest rate, and repayment duration.
-- **Payment Schedules**: Generate payment schedules based on loan details, showing installment amounts and due dates.
-- **Payment Management**: Keep track of loan payments, mark payments as completed, and monitor remaining balances.
-- **Reminder Notifications**: Receive notifications for upcoming loan payments to ensure timely payments.
-- **Loan Analytics**: View loan statistics and analytics, such as total loan amount, interest paid, and remaining balance.
-- **Secure and Private**: Ensure the security and privacy of user data with built-in authentication and data encryption.
+- Loan list with due amount filtering
+- QR code scanner for customer/loan lookup
+- Loan detail views
+- Bluetooth receipt printing
+- REST API integration via HTTP
 
-## Technologies Used
+## Tech Stack
 
-- **Flutter**: The app is built using the Flutter framework, allowing for cross-platform development and a native-like user experience.
-- **Firebase**: Firebase is utilized for authentication, data storage, and notification services.
-- **Database**: Store loan and payment information using a database solution like Firebase Firestore or SQLite.
+- **Flutter** / Dart
+- **qr_code_scanner** — QR scanning
+- **bluetooth_print** — thermal printer support
+- **http** — API calls
 
-## Installation
+## Getting Started
 
-1. Clone the repository:
+```bash
+flutter pub get
+flutter run
+```
 
-   ```bash
-   git clone https://github.com/your-username/ranro-loan-management-app.git
+Ensure Bluetooth permissions are granted on Android for receipt printing.
+
+## Project Structure
+
+```
+lib/
+├── screens/
+│   ├── home.dart                  # Dashboard
+│   ├── loans_list.dart            # Loan listing
+│   ├── qr_scanner.dart            # QR scan flow
+│   ├── loan_show.dart             # Loan details
+│   └── printing.dart              # Bluetooth print
+└── models/                        # Data models
+```
+
+## Author
+
+Kezara Lakshan — [GitHub](https://github.com/Kezara666)
